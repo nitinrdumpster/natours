@@ -4,6 +4,14 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tablet-portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include responsive(tablet-portrait) {
+    max-width: 50rem;
   }
 
   @include clearfix;
@@ -13,6 +21,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      
+      @include responsive(tablet-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include responsive(tablet-portrait) {
+      width: 100% !important;
     }
   }
 
